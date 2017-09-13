@@ -1,0 +1,267 @@
+@font-face {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: normal;
+}
+
+body {
+    color: #333;
+    font-family: "Helvetica Neue", "Helvetica", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, "Arial", sans-serif;
+}
+
+a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #333;
+    text-decoration: none;
+    -webkit-transition: all .2s;
+            transition: all .2s;
+}
+
+a.active,
+a:hover {
+    color: #bbb;
+    text-decoration: none;
+}
+
+a:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: calc(100% - 30px);
+    height: 6rem;
+    background: #fff;
+    border-bottom: solid 1px #ddd;
+    z-index: 999;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    header {
+        width: 720px;
+        height: 7rem;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    header {
+        width: 940px;
+        height: 7rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        width: 1140px;
+        height: 7rem;
+    }
+}
+
+h1 {
+    float: left;
+    width: 245px;
+    height: 6rem;
+    line-height: 6rem;
+    font-size: 1.7rem;
+    font-family: "Crimson Text";
+    letter-spacing: 1px;
+}
+
+h1 a:hover {
+    color: #333;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        width: 320px;
+        height: 7rem;
+        line-height: 7rem;
+        font-size: 2.2rem;
+    }
+}
+
+.menu-trigger {
+    float: right;
+    width: 20px;
+    height: 100%;
+}
+
+.menu-trigger-icon {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+	height: 11px;
+}
+
+.menu-trigger-icon span {
+    display: block;
+	position: absolute;
+	width: 20px;
+	height: 1px;
+	background-color: #888;
+	-webkit-transition: all .3s;
+	        transition: all .3s;
+}
+
+.menu-trigger-icon span:nth-of-type(1) {
+	top: 0px;
+}
+
+.menu-trigger-icon span:nth-of-type(2) {
+	top: 5px;
+}
+
+.menu-trigger-icon span:nth-of-type(3) {
+	bottom: 0;
+}
+
+.menu-trigger-icon.active span:nth-of-type(1) {
+	-webkit-transform: translateX(1px) translateY(5px) rotate(-45deg);
+	        transform: translateX(1px) translateY(5px) rotate(-45deg);
+}
+
+.menu-trigger-icon.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.menu-trigger-icon.active span:nth-of-type(3) {
+	-webkit-transform: translateX(1px) translateY(-5px) rotate(45deg);
+	        transform: translateX(1px) translateY(-5px) rotate(45deg);
+}
+
+#main {
+    margin-top: 10rem;
+}
+
+#menu {
+    display: none;
+    position: fixed;
+    height: 100%;
+    margin-top: -10rem;
+    padding: 8rem 0 0 15px;
+    background: #fff;
+    font-family: "Crimson Text";
+    z-index: 998;
+    overflow: scroll;
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        margin-top: 11.5rem;
+    }
+    
+    #menu {
+        display: block;
+        position: static;
+        margin-top: 0;
+        padding-top: 0;
+        overflow: visible;
+    }
+}
+
+.menu-item {
+    margin-bottom: 1rem;
+}
+
+.menu-item p,
+.category-list-item,
+.brand-list-item {
+    height: 3.5rem;
+}
+
+.category-list,
+.brand-list {
+    margin-left: 1rem;
+}
+
+.wrapper  {
+    margin-bottom: 30px;
+    -webkit-animation: fade-in 1s ease 0s 1 normal;
+            animation: fade-in 1s ease 0s 1 normal;
+}
+
+@-webkit-keyframes fade-in {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes fade-in {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+
+.item-holder {
+    width: 128px;
+    height: 230px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .item-holder {
+        margin: 0 0 0 auto;
+    }
+}
+
+.img-holder {
+    height: 128px;
+    text-align: center;
+}
+
+.item-name,
+.item-price {
+    width: 128px;
+    margin-top: 8px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.pagination {
+    height: 6rem;
+    line-height: 5rem;
+    text-align: center;
+}
+
+.page-number {
+    display: inline-block;
+    width: 35px;
+    font-family: "Crimson Text";
+    font-size: 1.7rem;
+}
+
+.page-number a.current {
+    color: #bbb;
+}
+
+footer {
+    margin: 6rem auto 2rem;
+    color: #aaa;
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer p {
+    height: 2rem;
+    line-height: 2rem;
+    color: #aaa;
+}
+
+footer a {
+    color: #aaa;
+}
+
+footer a:hover {
+    color: #ccc;
+}
